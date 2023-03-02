@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+
+.fancy-border {
+  background-color: violet;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+}
+.fancy-border img {
+  width: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
