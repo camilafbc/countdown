@@ -18,6 +18,6 @@ function countdown(){
     document.getElementById('seconds').innerText = Math.floor(diff % minute / second)
     }
 
-let x = setInterval(() => countdown(), second)
+setInterval(() => countdown(), second)
 
 

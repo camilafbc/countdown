@@ -1,14 +1,28 @@
+*body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+main{
+    margin: auto auto;
+}
 
 .container{
     display: flex;
 }
 
-.fancy-border{
-    background-color: violet;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+.img-container{
+
 
     img{
         width: 50%;
     }
+}
+
+.fancy-border{
+    // background-color: violet;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 37%, rgba(226,17,221,1) 96%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
 }
