@@ -20,4 +20,21 @@ function countdown(){
 
 setInterval(() => countdown(), second)
 
+// FADE & MODAL
+
+const button = document.getElementById("btn")
+
+const fade = document.querySelector("#fade")
+const modal = document.querySelector("#modal")
+
+function toggleModal(){
+    [fade, modal].forEach((element => {
+        element.classList.toggle("hide")
+    }))
+}
+
+[button, fade].forEach((el => {
+    el.addEventListener('click', toggleModal)
+}))
+
 

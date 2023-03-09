@@ -29,12 +29,28 @@
                     <div class="timer">
                         <span id="seconds"></span>
                         <p>SEGUNDOS</p>
-                    </div> 
+                    </div>  
                 </div>
                 <p>Cadastre-se para receber todas as novidades em primeira mão!</p>
-                <button>CADASTRAR</button>
+                <button id="btn">CADASTRAR</button>
         </div>
     </main>
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <form action="">
+                <div>
+                    <label for="name">Nome: </label>
+                    <input type="text" name="name" id="name">
+                </div>
+                
+                <div>
+                    <label for="email">E-mail: </label>
+                    <input type="text" name="emai" id="email">
+                </div>
+                
+                <input type="button" value="CADASTRAR">
+            </form>
+        </div>
 
     <!-- Script -->
     <script src="assets/js/index.js"></script>
