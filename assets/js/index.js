@@ -1,40 +1,59 @@
 
-const second = 1000;
-const minute = second * 60;
-const hour = minute * 60;
-const day = hour * 24;
+import { countdown } from "./countdown.js";
 
-const finalDate = new Date("2023 sep, 21, 13:00:00").getTime()
+import { toggleModal } from "./toggleModal.js";
 
+// Atualiza a contagem
+setInterval(() => countdown(), 1000)
 
-
-function countdown(){
-    let now = new Date(Date.now()).getTime()
-    let diff = finalDate - now
-
-    document.getElementById('days').innerText = Math.floor(diff/day)
-    document.getElementById('hours').innerText = Math.floor(diff % day / hour)
-    document.getElementById('minutes').innerText = Math.floor(diff % hour / minute)
-    document.getElementById('seconds').innerText = Math.floor(diff % minute / second)
-    }
-
-setInterval(() => countdown(), second)
-
-// FADE & MODAL
-
+// Chama o modal
 const button = document.getElementById("btn")
 
-const fade = document.querySelector("#fade")
-const modal = document.querySelector("#modal")
+button.addEventListener('click', toggleModal)
 
-function toggleModal(){
-    [fade, modal].forEach((element => {
-        element.classList.toggle("hide")
-    }))
+
+const submitBtn = document.getElementById('submitBtn')
+const form = document.getElementById('form')
+
+
+// submitBtn.addEventListener('click', (ev) => {
+//     ev.preventDefault()
+
+//     const teste = ev.target.parentNode.remove()
+//     // modal.removeChild(form)
+//     // modal.innerHTML = "<p>Inscrição efetuada com sucesso!</p>"
+
+// console.log(teste)
+// })
+
+// VALIDAR MODAL
+
+const userEmail = document.getElementById("email") 
+const userName = document.getElementById("name")
+
+function validateEmail(email){
+    if(!email.match(/\w{2,}@[a-zA-Z]{2,}\.[a-zA-Z]{2,}/)){
+        const err = new Error("E-mail inválido")
+        err.input = 'email'
+        throw err
+    }
 }
 
-[button, fade].forEach((el => {
-    el.addEventListener('click', toggleModal)
-}))
+function validateName(name){
+    if(!name.match(/\w{3,}/)){
+        const err = new Error("Nome deve conter mais de 3 caracteres.")
+        err.input = 'name'
+        throw err
+    }
+}
 
+submitBtn.addEventListener('submit', () => {
+    try {
+        validateName(userName.value)
+        validateEmail(userEmail.value) 
+        document.getElementById("email").classList.add('success')
+    } catch (err) {
+        document.getElementById("email").classList.add('error')
+    }
+})
 

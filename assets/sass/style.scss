@@ -15,7 +15,8 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lora', serif;
+    color: #f5f5f5;
 }
 
 main{
@@ -32,7 +33,7 @@ main{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: 1.75rem;
 
     h2{
         font-family: 'Lora', serif;
@@ -55,7 +56,8 @@ main{
     display: flex;
     // justify-content: center;
     // text-align: center;
-    gap: .5rem;    
+    gap: .5rem; 
+    color: #ff4500;
 }
 
 .timer{
@@ -96,17 +98,19 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
     width: 300px;
     max-width: 80%;
-    z-index: 10;
-    background-color: #ffffff;
+    border-radius: .5rem;
+    background-color: #f5f5f5;
 
         form{
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 1rem 0;
+            // justify-content: center;
+            padding: 1rem .5rem;
+            gap: 1rem;
 
                 input[type="text"]{
                     outline: 0;
@@ -135,6 +139,13 @@ main{
     top: 0;
 }
 
+.success{
+    border: 1px solid green;
+}
+
+.error{
+    border: 1px solid red;
+}
 
 
     

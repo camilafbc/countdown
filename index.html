@@ -12,7 +12,7 @@
 <body>
     <main>
         <div class="container">
-                <h2>NOSSA NOVA COLEÇÃO PRIMAVERA/VERÃO CHEGA EM:</h2>
+                <h2>NOSSA NOVA COLEÇÃO PRIMAVERA&hybull;VERÃO CHEGA EM:</h2>
                 <div class="timer-container">
                     <div class="timer">
                         <span id="days"></span>
@@ -31,13 +31,13 @@
                         <p>SEGUNDOS</p>
                     </div>  
                 </div>
-                <p>Cadastre-se para receber todas as novidades em primeira mão!</p>
-                <button id="btn">CADASTRAR</button>
+                <p>Inscreva-se para receber todas as novidades em primeira mão!</p>
+                <button id="btn">Inscreva-se</button>
         </div>
     </main>
         <div id="fade" class="hide"></div>
         <div id="modal" class="hide">
-            <form action="">
+            <form action="" id="form">
                 <div>
                     <label for="name">Nome: </label>
                     <input type="text" name="name" id="name">
@@ -45,14 +45,14 @@
                 
                 <div>
                     <label for="email">E-mail: </label>
-                    <input type="text" name="emai" id="email">
+                    <input type="text" name="email" id="email">
                 </div>
                 
-                <input type="button" value="CADASTRAR">
+                <input type="button" value="ENVIAR" id="submitBtn">
             </form>
         </div>
 
     <!-- Script -->
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/index.js" type="module"></script>
 </body>
 </html>
