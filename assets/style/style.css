@@ -26,14 +26,13 @@ main {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   text-align: center;
   gap: 1.75rem;
 }
-.container h2 {
+.container h1 {
   font-family: "Lora", serif;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 .container button {
   cursor: pointer;
@@ -58,8 +57,11 @@ main {
   align-items: center;
   border-radius: 1rem;
 }
+.timer.days-timer {
+  margin-right: 1rem;
+}
 .timer span {
-  font-size: 2.5rem;
+  font-size: 3rem;
   width: 60px;
 }
 .timer p {
@@ -85,24 +87,34 @@ main {
   transform: translate(-50%, -50%);
   z-index: 10;
   width: 300px;
+  height: 200px;
   max-width: 80%;
   border-radius: 0.5rem;
-  background-color: #f5f5f5;
+  background-color: #ff4500;
+  filter: drop-shadow(2px 4px 6px black);
 }
 #modal form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0.5rem;
   padding: 1rem 0.5rem;
   gap: 1rem;
 }
 #modal form input[type=text] {
   outline: 0;
+  border: none;
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
 }
-#modal input[type=button] {
+#modal input[type=submit] {
   cursor: pointer;
   border: none;
-  align-self: center;
+  background-color: transparent;
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 #fade, #modal {
@@ -120,12 +132,25 @@ main {
   top: 0;
 }
 
-.success {
-  border: 1px solid green;
-}
-
 .error {
   border: 1px solid red;
+}
+
+#email-error {
+  font-size: small;
+  color: #ff0000;
+}
+
+.modal-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+.modal-content img {
+  align-self: center;
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

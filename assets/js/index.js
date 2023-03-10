@@ -15,16 +15,16 @@ button.addEventListener('click', toggleModal)
 const submitBtn = document.getElementById('submitBtn')
 const form = document.getElementById('form')
 
-
-// submitBtn.addEventListener('click', (ev) => {
-//     ev.preventDefault()
-
-//     const teste = ev.target.parentNode.remove()
-//     // modal.removeChild(form)
-//     // modal.innerHTML = "<p>Inscrição efetuada com sucesso!</p>"
-
-// console.log(teste)
-// })
+function success(ev){
+    ev.target.parentNode.remove()
+    document.getElementById("modal").innerHTML = `
+    <div class="modal-content">
+                <p>Inscrição recebida com sucesso!</p>
+                <img src="assets/img/beam-flower-background.png" alt="">
+                <p>Em breve você receberá todas as nossas novidades!</p>
+            </div>
+    `
+}
 
 // VALIDAR MODAL
 
@@ -36,6 +36,7 @@ function validateEmail(email){
         const err = new Error("E-mail inválido")
         err.input = 'email'
         throw err
+        console.log(email)
     }
 }
 
@@ -47,13 +48,19 @@ function validateName(name){
     }
 }
 
-submitBtn.addEventListener('submit', () => {
+submitBtn.addEventListener('click', (ev) => {
+    ev.preventDefault()
+
     try {
-        validateName(userName.value)
+        // validateName(userName.value)
         validateEmail(userEmail.value) 
-        document.getElementById("email").classList.add('success')
+        console.log(userEmail.value)
+        success(ev)
+
     } catch (err) {
-        document.getElementById("email").classList.add('error')
+        document.getElementById("email-error").innerText = `${err.message}`
+        document.querySelector("input[name='email']").classList.add('error')
     }
 })
+
 
