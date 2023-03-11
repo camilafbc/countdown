@@ -1,0 +1,39 @@
+@mixin flex-column-center(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin position(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+};
+
+@mixin button(
+    $bckg-color,
+    $color){
+        cursor: pointer;
+        border: none;
+        background-color: $bckg-color;
+        color: $color;
+};
+
+@mixin config(
+    $top,
+    $left,
+    $width,
+    $height,
+    $z-index,
+    $bck-color
+){
+    position: fixed;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    z-index: $z-index;
+    background-color: $bck-color;
+}

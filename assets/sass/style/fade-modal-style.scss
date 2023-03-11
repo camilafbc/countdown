@@ -1,0 +1,96 @@
+// Modal
+
+#fade{
+    @include config(
+        0,
+        0,
+        100%,
+        100%,
+        5,
+        $background-fade-color
+    )
+}
+
+#modal{
+    @include config(
+        50%,
+        50%,
+        300px,
+        200px,
+        10,
+        $beige-color
+    );
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    border-radius: .5rem;
+    color: $white-color;
+    border: 1px solid $modal-border-color;
+    filter: drop-shadow(1px 1px 9px black);
+
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: .5rem;
+            padding: 1rem .5rem;
+            gap: 1rem;
+
+                input[type="text"]{
+                    outline: 0;
+                    border: none;
+                    width: 100%;
+                    padding: .25rem;
+                    margin-top: .25rem;
+                }
+        }
+
+        input[type="submit"]{
+            @include button(transparent, $white-color);
+            font-weight: 600;
+            font-size: .75rem;
+            margin-top: .5rem;
+        }
+}
+
+#fade, #modal{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade.hide, #modal.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide{
+    top: 0;
+}
+
+
+.error{
+    border: 1px solid red;
+}
+
+#email-error{
+    font-size: small;
+    color: #ff0000;
+}
+
+// MODAL AGRADECIMENTO
+
+.modal-content{
+    @include flex-column-center();
+    text-align: center;
+    gap: 1rem;
+    padding: 1.25rem;
+
+    img{
+        align-self: center;
+        width: 100px;
+    }
+}
+
+
+    
+
+
