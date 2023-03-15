@@ -2,19 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    a{
+        text-decoration: none;
+    }
 }
 
 body{
-    background: $background-color url(../img/flowers-all-bckg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: $background-color;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
     font-family: 'Lora', serif;
 }
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 60px;
+
+    img{
+        width: 150px;
+    }
+
+    div{
+        display: flex;
+        gap: .75rem;
+
+        a{
+            color: #ff1768;
+        }
+    }
+}
+
 main{
-    @include position;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+    img{
+        width: 40%;
+    }
 }
 
 
