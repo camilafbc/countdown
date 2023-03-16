@@ -17,29 +17,32 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1rem;
   height: 60px;
 }
 header img {
-  width: 150px;
+  width: 80px;
 }
 header div {
   display: flex;
   gap: 0.75rem;
 }
 header div a {
+  font-size: 0.5rem;
   color: #ff1768;
 }
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
+  justify-content: center;
+  padding: 0 1rem;
 }
 main img {
-  width: 40%;
+  display: block;
+  margin: 1rem;
+  width: 100%;
 }
 
 .container {
@@ -47,9 +50,9 @@ main img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 1.5rem;
   text-align: center;
   gap: 1.5rem;
-  width: 80vw;
 }
 .container h1 {
   font-size: 1.5rem;
@@ -97,6 +100,22 @@ main img {
   font-size: 0.5rem;
   opacity: 0.8;
   color: #ff8b00;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+footer p {
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  color: #ff1768;
+}
+footer img {
+  display: block;
+  width: 20px;
 }
 
 @media (min-width: 540px) {
@@ -180,7 +199,7 @@ main img {
   width: 100%;
   height: 100%;
   z-index: 5;
-  background-color: rgba(214, 132, 73, 0.6392156863);
+  background-color: rgba(176, 136, 167, 0.6392156863);
 }
 
 #modal {
@@ -190,12 +209,11 @@ main img {
   width: 300px;
   height: 200px;
   z-index: 10;
-  background-color: #d68449;
+  background-color: #ffc8d6;
   transform: translate(-50%, -50%);
   max-width: 80%;
   border-radius: 0.5rem;
-  color: #f5f5f5;
-  border: 1px solid #c97234;
+  color: #ff1768;
   filter: drop-shadow(1px 1px 9px black);
 }
 #modal form {
@@ -216,7 +234,7 @@ main img {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: #f5f5f5;
+  color: #ff1768;
   font-weight: 600;
   font-size: 0.75rem;
   margin-top: 0.5rem;
