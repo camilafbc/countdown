@@ -13,56 +13,58 @@ body {
   font-family: "Lora", serif;
 }
 
-header {
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
   height: 60px;
 }
-header img {
+.header-container img {
   width: 80px;
 }
-header div {
+.header-container div {
   display: flex;
   gap: 0.75rem;
 }
-header div a {
+.header-container div a {
   font-size: 0.5rem;
   color: #ff1768;
 }
 
-main {
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  margin: 1rem 0;
 }
-main img {
+.main-container img {
   display: block;
-  margin: 1rem;
-  width: 100%;
+  width: 280px;
 }
 
-.container {
+.text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
   text-align: center;
   gap: 1.5rem;
 }
-.container h1 {
+.text-container h1 {
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #147177;
 }
-.container p {
+.text-container p {
   color: #d68449;
 }
-.container button {
+.text-container button {
   cursor: pointer;
   border: none;
   background-color: #d68449;
@@ -106,7 +108,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.25rem;
+  margin: 0 0.5rem;
 }
 footer p {
   margin-right: 0.5rem;
@@ -118,78 +120,22 @@ footer img {
   width: 20px;
 }
 
-@media (min-width: 540px) {
-  .container h1 {
-    font-size: 1.75rem;
+@media (min-width: 631px) {
+  .header-container img {
+    width: 100px;
   }
-  .container p {
-    font-size: 1.125rem;
+  .header-container div a {
+    font-size: 0.75rem;
   }
-  .container button {
-    font-size: 0.675rem;
+  .main-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  .timer span {
-    font-size: 3.25rem;
-  }
-  .timer p {
-    font-size: 0.55rem;
-  }
-}
-@media (min-width: 1000px) {
-  .container {
-    gap: 1.75rem;
-    width: 75vw;
-  }
-  .container h1 {
-    font-size: 2rem;
-  }
-  .container p {
-    font-size: 1.25rem;
-  }
-  .container button {
-    font-size: 0.675rem;
-  }
-  .timer span {
-    font-size: 3.5rem;
-  }
-  .timer.days-timer {
-    margin-right: 1.25rem;
-  }
-  .timer p {
-    font-size: 0.55rem;
-  }
-  .timer-container {
-    gap: 1rem;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    gap: 2.25rem;
-  }
-  .container h1 {
-    font-size: 2.5rem;
-  }
-  .container p {
+  .text-container h1 {
     font-size: 1.5rem;
   }
-  .container button {
-    font-size: 0.75rem;
-    width: 200px;
-  }
   .timer span {
-    font-size: 4.5rem;
-  }
-  .timer.days-timer {
-    margin-right: 2rem;
-  }
-  .timer.days-timer p {
-    margin-left: 2rem;
-  }
-  .timer p {
-    font-size: 0.75rem;
-  }
-  .timer-container {
-    gap: 2rem;
+    font-size: 3rem;
   }
 }
 #fade {

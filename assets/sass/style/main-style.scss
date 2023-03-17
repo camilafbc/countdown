@@ -10,18 +10,20 @@
 
 body{
     background-color: $background-color;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: cover;
     font-family: 'Lora', serif;
 }
 
-header{
+.container{
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+.header-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    // padding: 0 1rem;
     height: 60px;
 
     img{
@@ -39,25 +41,25 @@ header{
     }
 }
 
-main{
+.main-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 1rem 0;
     // height: 80vh;
-    padding: 0 1rem;
+    // padding: 0 1rem 1rem;
 
     img{
         display: block;
-        margin: 1rem;
-        width: 100%;
+        // margin: 1rem;
+        width: 280px;
     }
 }
 
-
-.container{
+.text-container{
     @include flex-column-center();
-    margin-top: 1.5rem;
+    // margin-top: 1.5rem;
     text-align: center;
     gap: 1.5rem;
 
@@ -114,7 +116,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: .25rem;
+    margin: 0 .5rem;
 
     p{
         margin-right: .5rem;
@@ -132,106 +134,52 @@ footer{
 
 
 
-@media (min-width: 540px){
-    .container{
+@media(min-width: 631px){
+    .header-container{
+        img{
+            width: 100px;
+        }
+
+        div{
+            a{
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .main-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .text-container{
         h1{
-            font-size: 1.75rem;
-        }
-
-        p{
-            font-size: 1.125rem;
-        }
-
-        button{
-            font-size: 0.675rem;
-        }
-    }
-
-    .timer{
-        span{
-            font-size: 3.25rem;
-        }
-
-        p{
-            font-size: 0.55rem;
-        }
-    }
-}
-
-@media (min-width: 1000px){
-    .container{
-        gap: 1.75rem;
-        width: 75vw;
-
-        h1{
-            font-size: 2rem;
-        }
-
-        p{
-            font-size: 1.25rem;
-        }
-
-        button{
-            font-size: 0.675rem;
-        }
-    }
-
-    .timer{
-        span{
-            font-size: 3.5rem;
-        }
-
-        &.days-timer{
-            margin-right: 1.25rem;
-        }
-
-        p{
-            font-size: 0.55rem;
-        }
-    }
-
-    .timer-container{
-        gap: 1rem;
-    }
-}
-
-@media (min-width: 1200px){
-    .container{
-        gap: 2.25rem;
-
-        h1{
-            font-size: 2.5rem;
-        }
-
-        p{
             font-size: 1.5rem;
         }
 
-        button{
-            font-size: 0.75rem;
-            width: 200px;
-        }
+        // p{
+        //     font-size: 1.125rem;
+        // }
+
+        // button{
+        //     font-size: 0.675rem;
+        // }
     }
 
     .timer{
         span{
-            font-size: 4.5rem;
+            font-size: 3rem;
         }
 
-        &.days-timer{
-            margin-right: 2rem;
-
-            p{
-                margin-left: 2rem;
-            }
-        }
-
-        p{
-            font-size: 0.75rem;
-        }
+        // p{
+        //     font-size: 0.55rem;
+        // }
     }
 
-    .timer-container{
-        gap: 2rem;
-    }
-};
+    // footer{
+    //     img{
+    //         width: 150px;
+    //     }
+    // }
+}
+
