@@ -23,7 +23,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // padding: 0 1rem;
+    width: 100%;
     height: 60px;
 
     img{
@@ -46,7 +46,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0;
+    gap: 1.75rem;
+    margin: 1rem auto;
+
     // height: 80vh;
     // padding: 0 1rem 1rem;
 
@@ -88,6 +90,7 @@ body{
 .timer-container{
     display: flex;
     gap: .5rem; 
+    margin: 1rem 0 1.5rem;
     color: $orange-color;
 }
 
@@ -113,10 +116,14 @@ body{
 }
 
 footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 1rem 0 .5rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 .5rem;
 
     p{
         margin-right: .5rem;
@@ -132,17 +139,72 @@ footer{
 
 // RESPONSIVIDADE
 
+@media(min-width: 350px){
+    .header-container{
+        div{
+            a{
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+@media(min-width: 400px){
+    .main-container{
+        img{
+            width: 300px;
+        }
+    }
+
+    .header-container{
+        img{
+            width: 100px
+        }
+
+        div{
+            a{
+                font-size: 0.825rem;
+            }
+        }
+    }
+
+    .text-container{
+        h1{
+            font-size: 1.75rem;
+        }
+
+        p{
+            font-size: 1.125rem;
+        }
+    }
+
+    .timer{
+
+        &.days-timer{
+            margin-right: 0;
+        }
+
+        span {
+            font-size: 3.5rem;
+            width: 80px;
+        }
+
+        p{
+            font-size: 0.75rem;
+        }
+    }
+}
 
 
 @media(min-width: 631px){
     .header-container{
         img{
-            width: 100px;
+            width: 120px;
         }
 
         div{
             a{
-                font-size: 0.75rem;
+                font-size: 1rem;
             }
         }
     }
@@ -150,20 +212,20 @@ footer{
     .main-container{
         flex-direction: row;
         justify-content: space-between;
+
+        img{
+            width: 280px;
+        }
     }
 
     .text-container{
         h1{
             font-size: 1.5rem;
         }
+    }
 
-        // p{
-        //     font-size: 1.125rem;
-        // }
-
-        // button{
-        //     font-size: 0.675rem;
-        // }
+    .timer-container{
+        margin: 0;
     }
 
     .timer{
@@ -171,15 +233,56 @@ footer{
             font-size: 3rem;
         }
 
-        // p{
-        //     font-size: 0.55rem;
-        // }
+        p{
+            font-size: 0.5rem;
+        }
     }
-
-    // footer{
-    //     img{
-    //         width: 150px;
-    //     }
-    // }
 }
 
+@media(min-width: 820px){
+    .header-container{
+        img{
+            width: 150px;
+        }
+
+        div{
+            a{
+                font-size: 1.25rem;
+            }
+        }
+
+        &.container{
+            width: 820px;
+        }        
+    }
+
+    .main-container{
+        img{
+            width: 290px;
+        }
+
+        &.container{
+            width: 820px;
+        }  
+    }
+
+    .text-container{
+        h1{
+            font-size: 1.75rem;
+        }
+    }
+
+    .timer-container{
+        margin: 0;
+    }
+
+    .timer{
+        span{
+            font-size: 3.5rem;
+        }
+
+        // p{
+        //     font-size: 0.5rem;
+        // }
+    }
+}

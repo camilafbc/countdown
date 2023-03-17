@@ -22,6 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   height: 60px;
 }
 .header-container img {
@@ -41,7 +42,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0;
+  gap: 1.75rem;
+  margin: 1rem auto;
 }
 .main-container img {
   display: block;
@@ -80,6 +82,7 @@ body {
 .timer-container {
   display: flex;
   gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
   color: #ff8b00;
 }
 
@@ -105,10 +108,13 @@ body {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 1rem 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.5rem;
 }
 footer p {
   margin-right: 0.5rem;
@@ -120,22 +126,89 @@ footer img {
   width: 20px;
 }
 
-@media (min-width: 631px) {
+@media (min-width: 350px) {
+  .header-container div a {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 400px) {
+  .main-container img {
+    width: 300px;
+  }
   .header-container img {
     width: 100px;
   }
   .header-container div a {
+    font-size: 0.825rem;
+  }
+  .text-container h1 {
+    font-size: 1.75rem;
+  }
+  .text-container p {
+    font-size: 1.125rem;
+  }
+  .timer.days-timer {
+    margin-right: 0;
+  }
+  .timer span {
+    font-size: 3.5rem;
+    width: 80px;
+  }
+  .timer p {
     font-size: 0.75rem;
+  }
+}
+@media (min-width: 631px) {
+  .header-container img {
+    width: 120px;
+  }
+  .header-container div a {
+    font-size: 1rem;
   }
   .main-container {
     flex-direction: row;
     justify-content: space-between;
   }
+  .main-container img {
+    width: 280px;
+  }
   .text-container h1 {
     font-size: 1.5rem;
   }
+  .timer-container {
+    margin: 0;
+  }
   .timer span {
     font-size: 3rem;
+  }
+  .timer p {
+    font-size: 0.5rem;
+  }
+}
+@media (min-width: 820px) {
+  .header-container img {
+    width: 150px;
+  }
+  .header-container div a {
+    font-size: 1.25rem;
+  }
+  .header-container.container {
+    width: 820px;
+  }
+  .main-container img {
+    width: 290px;
+  }
+  .main-container.container {
+    width: 820px;
+  }
+  .text-container h1 {
+    font-size: 1.75rem;
+  }
+  .timer-container {
+    margin: 0;
+  }
+  .timer span {
+    font-size: 3.5rem;
   }
 }
 #fade {
