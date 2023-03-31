@@ -16,7 +16,7 @@
         50%,
         50%,
         300px,
-        200px,
+        350px,
         10,
         $background-color
     );
@@ -24,8 +24,18 @@
     max-width: 80%;
     border-radius: .5rem;
     color: $pink-color;
-    // border: 1px solid $modal-border-color;
+
     filter: drop-shadow(1px 1px 9px black);
+
+        div{
+            border-bottom: solid 1px $white-color;
+
+            img{
+                width: 100px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
 
         form{
             display: flex;
@@ -38,16 +48,20 @@
                     outline: 0;
                     border: none;
                     width: 100%;
-                    padding: .25rem;
-                    margin-top: .25rem;
+                    padding: 0.5rem 0.25rem;
+                    margin-top: 0.25rem;
                 }
+
+            div{
+                border-bottom: none;
+            }
         }
 
         input[type="submit"]{
             @include button(transparent, $pink-color);
             font-weight: 600;
-            font-size: .75rem;
-            margin-top: .5rem;
+            font-size: 0.75rem;
+            margin-top: 1rem;
         }
 }
 
@@ -83,11 +97,14 @@
     text-align: center;
     gap: 1rem;
     padding: 1.25rem;
+    border-bottom: none;
 
     img{
         align-self: center;
         width: 100px;
     }
+
+    
 }
 
 
