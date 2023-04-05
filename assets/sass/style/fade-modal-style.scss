@@ -27,15 +27,12 @@
 
     filter: drop-shadow(1px 1px 9px black);
 
-        div{
-            border-bottom: solid 1px $white-color;
-
-            img{
-                width: 100px;
-                display: block;
-                margin: 0 auto;
-            }
+        img{
+            width: 100px;
+            display: block;
+             margin: 0 auto;
         }
+       
 
         form{
             display: flex;
@@ -46,10 +43,14 @@
 
                 input[type="text"]{
                     outline: 0;
-                    border: none;
+                    border: 1px solid transparent;
                     width: 100%;
                     padding: 0.5rem 0.25rem;
                     margin-top: 0.25rem;
+
+                    &.error{
+                        border: 1px solid $red-color;
+                    }
                 }
 
             div{
@@ -63,6 +64,10 @@
             font-size: 0.75rem;
             margin-top: 1rem;
         }
+}
+
+.border{
+    border-bottom: solid 1px $white-color;
 }
 
 #fade, #modal{
@@ -80,17 +85,12 @@
     top: 0;
 }
 
-
-.error{
-    border: 1px solid red;
-}
-
 #email-error{
     font-size: small;
-    color: #ff0000;
+    color: $red-color
 }
 
-// MODAL AGRADECIMENTO
+// SUCCESS MODAL
 
 .modal-content{
     @include flex-column-center();
@@ -103,8 +103,6 @@
         align-self: center;
         width: 100px;
     }
-
-    
 }
 
 
