@@ -4,7 +4,7 @@ function success(ev){
     document.getElementById("modal").innerHTML = `
     <div class="modal-content">
         <p>Inscrição realizada com sucesso!</p>
-        <img src="assets/img/beam-flower-background.png" alt="">
+        <img src="assets/img/beam-flower-background.png" alt="flowers">
         <p>Em breve você receberá todas as nossas novidades!</p>
     </div>
     `

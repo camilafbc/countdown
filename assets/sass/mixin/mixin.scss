@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+@mixin imagem($width){
+    display: block;
+    width: $width;
+}
+
 @mixin position(){
     position: absolute;
     top: 50%;

@@ -5,8 +5,6 @@ const day = hour * 24;
 
 const finalDate = new Date("2023 sep, 21, 13:00:00").getTime()
 
-
-
 function countdown(){
     let now = new Date(Date.now()).getTime()
     let diff = finalDate - now

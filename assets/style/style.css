@@ -26,6 +26,7 @@ body {
   height: 60px;
 }
 .header-container img {
+  display: block;
   width: 80px;
 }
 .header-container div {
@@ -35,9 +36,11 @@ body {
 .header-container div a {
   font-size: 0.5rem;
   color: #ff1768;
+  border-bottom: 2px solid transparent;
 }
 .header-container div a:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid #ff1768;
+  transition: 0.4s;
 }
 
 .main-section {
@@ -82,6 +85,7 @@ body {
 }
 .text-container button:hover {
   opacity: 0.8;
+  transition: 0.4s;
 }
 
 .timer-container {
@@ -254,6 +258,14 @@ footer img {
     font-size: 0.75rem;
   }
 }
+@media (min-width: 1150px) {
+  .header-container.container {
+    width: 1200px;
+  }
+  .main-section.container {
+    width: 1200px;
+  }
+}
 #fade {
   position: fixed;
   top: 0;
@@ -276,11 +288,11 @@ footer img {
   max-width: 80%;
   border-radius: 0.5rem;
   color: #ff1768;
-  filter: drop-shadow(1px 1px 9px black);
+  filter: drop-shadow(1px 1px 9px #000000);
 }
 #modal img {
-  width: 100px;
   display: block;
+  width: 100px;
   margin: 0 auto;
 }
 #modal form {
@@ -343,13 +355,29 @@ footer img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.25rem;
   border-bottom: none;
 }
 .modal-content img {
   align-self: center;
   width: 100px;
+}
+
+@media (min-width: 1000px) {
+  #modal {
+    width: 350px;
+    height: 375px;
+  }
+  #modal input[type=submit] {
+    margin-top: 1.25rem;
+  }
+  .modal-content {
+    font-size: 1.1rem;
+  }
+  .modal-content img {
+    width: 115px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

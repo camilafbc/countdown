@@ -23,9 +23,7 @@ submitBtn.addEventListener('click', (ev) => {
 
     try {
         validateEmail(userEmail.value) 
-
-        setTimeout(() => success(ev), 1000 * 3)
-        // success(ev)
+        setTimeout(() => success(ev), 1000 * 2)
     } catch (err) {
         document.getElementById("email-error").innerText = `${err.message}`
         document.querySelector("input[name='email']").classList.add('error')

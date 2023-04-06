@@ -27,7 +27,7 @@ body{
     height: 60px;
 
     img{
-        width: 80px;
+        @include imagem(80px);
     }
 
     div{
@@ -35,38 +35,29 @@ body{
         gap: .75rem;
 
         a{
-            font-size: .5rem;
+            font-size: 0.5rem;
             color: $pink-color;
+            border-bottom: 2px solid transparent;
 
             &:hover{
-                text-decoration: underline;
+                border-bottom: 2px solid $pink-color;
+                transition: 0.4s;
             }
         }
     }
 }
 
 .main-section{
-    // width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-column-center;
     gap: 1.75rem;
-    // margin: 1rem auto;
-
-    // height: 80vh;
-    // padding: 0 1rem 1rem;
 
     img{
-        display: block;
-        // margin: 1rem;
-        width: 280px;
+        @include imagem(280px);
     }
 }
 
 .text-container{
-    @include flex-column-center();
-    // margin-top: 1.5rem;
+    @include flex-column-center;
     text-align: center;
     gap: 1.5rem;
 
@@ -90,8 +81,8 @@ body{
         font-weight: 800;
 
         &:hover{
-            // scale: 1.1;
             opacity: 0.8;
+            transition: 0.4s;
         }
     }
     
@@ -105,7 +96,7 @@ body{
 }
 
 .timer{
-    @include flex-column-center();
+    @include flex-column-center;
     border-radius: 1rem;
 
     &.days-timer{
@@ -126,8 +117,6 @@ body{
 }
 
 footer{
-    // position: absolute;
-    // bottom: 1;
     width: 100%;
     margin: 1rem 0 0.05rem;
 
@@ -142,8 +131,7 @@ footer{
     }
 
     img{
-        display: block;
-        width: 20px;
+        @include imagem(20px);
     }
 }
 
@@ -236,10 +224,6 @@ footer{
         }
     }
 
-    // .timer-container{
-    //     margin: 0;
-    // }
-
     .timer{
         span{
             font-size: 3rem;
@@ -253,16 +237,6 @@ footer{
 
 @media(min-width: 820px){
     .header-container{
-        // img{
-        //     width: 150px;
-        // }
-
-        // div{
-        //     a{
-        //         font-size: 1.25rem;
-        //     }
-        // }
-
         &.container{
             width: 820px;
         }        
@@ -283,10 +257,6 @@ footer{
             font-size: 1.75rem;
         }
     }
-
-    // .timer-container{
-    //     margin: 0;
-    // }
 
     .timer{
         span{
@@ -325,10 +295,6 @@ footer{
         }
     }
 
-    // .timer-container{
-    //     margin: 0;
-    // }
-
     .timer{
         span{
             font-size: 3.5rem;
@@ -363,10 +329,6 @@ footer{
         }
     }
 
-    // .timer-container{
-    //     margin: 0;
-    // }
-
     .timer{
 
         &.days-timer{
@@ -380,5 +342,19 @@ footer{
         p {
             font-size: 0.75rem;
         }
+    }
+}
+
+@media(min-width: 1150px){
+    .header-container{
+        &.container{
+            width: 1200px;
+        }        
+    }
+
+    .main-section{
+        &.container{
+            width: 1200px;
+        }  
     }
 }

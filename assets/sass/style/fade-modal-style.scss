@@ -25,11 +25,10 @@
     border-radius: .5rem;
     color: $pink-color;
 
-    filter: drop-shadow(1px 1px 9px black);
+    filter: drop-shadow(1px 1px 9px $black-color);
 
         img{
-            width: 100px;
-            display: block;
+            @include imagem(100px);
              margin: 0 auto;
         }
        
@@ -95,13 +94,34 @@
 .modal-content{
     @include flex-column-center();
     text-align: center;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 1.25rem;
     border-bottom: none;
 
     img{
         align-self: center;
         width: 100px;
+    }
+}
+
+// RESPONSIVIDADE
+
+@media(min-width: 1000px){
+    #modal{
+        width: 350px;
+        height: 375px;
+
+        input[type="submit"]{
+            margin-top: 1.25rem;
+        }
+    }
+
+    .modal-content{
+        font-size: 1.1rem;
+
+        img{
+            width: 115px;
+        }
     }
 }
 
